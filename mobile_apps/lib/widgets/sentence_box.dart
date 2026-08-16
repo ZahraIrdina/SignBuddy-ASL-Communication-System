@@ -1,0 +1,2 @@
+import 'package:flutter/material.dart';
+class SentenceBox extends StatelessWidget { final String text; const SentenceBox({super.key,required this.text}); @override Widget build(BuildContext c)=>Container(width:double.infinity,padding:const EdgeInsets.all(16),decoration:BoxDecoration(border:Border.all(color:Colors.black12),borderRadius:BorderRadius.circular(14)),child:Text(text,style:const TextStyle(fontSize:18,fontWeight:FontWeight.bold)));}

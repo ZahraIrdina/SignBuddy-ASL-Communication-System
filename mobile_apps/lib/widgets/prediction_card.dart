@@ -1,0 +1,3 @@
+import 'package:flutter/material.dart';
+import '../utils/app_colors.dart';
+class PredictionCard extends StatelessWidget { final String label; final double confidence; const PredictionCard({super.key,required this.label,required this.confidence}); @override Widget build(BuildContext c)=>Card(child:Padding(padding:const EdgeInsets.all(16),child:Column(crossAxisAlignment:CrossAxisAlignment.start,children:[const Text('Detected Sign'),Text(label,style:const TextStyle(fontSize:24,fontWeight:FontWeight.bold)),const SizedBox(height:12),Text('Confidence ${(confidence*100).round()}%'),LinearProgressIndicator(value:confidence,color:AppColors.teal)])));}
