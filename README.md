@@ -1,66 +1,83 @@
 # SignBuddy – Smart Two-Way Communication System
 
-> **A Smart Two-Way Communication System between Deaf and Hearing People using Deep Learning and Natural Language Processing**
+SignBuddy is an AI-powered mobile application developed as my Final Year Project (FYP) to support two-way communication between Deaf and hearing individuals.
 
-SignBuddy is an AI-powered mobile application designed to support communication between Deaf and hearing individuals.
+The system uses **Deep Learning, Computer Vision, Natural Language Processing (NLP), and Speech Technologies** to translate between sign language and spoken/text communication.
 
-The system provides two-way communication by recognizing American Sign Language (ASL) hand gestures and converting them into text and speech, while also allowing hearing users to communicate with Deaf users through text or speech that can be converted into ASL visual outputs.
+## 🎯 Project Overview
 
-This project was developed as a **Final Year Project (FYP)** for the **Bachelor of Computer Science (Artificial Intelligence)**.
+SignBuddy supports two main communication directions:
 
----
+### Deaf → Hearing
+- Uses the camera to capture ASL hand gestures
+- Recognizes ASL alphabet and numbers using a Deep Learning model
+- Converts recognized gestures into text
+- Converts text into speech using Text-to-Speech
 
-## 📌 Table of Contents
+### Hearing → Deaf
+- Accepts text or speech input
+- Processes the input using NLP
+- Provides corresponding ASL visual output
+- Supports sign language videos and alphabet representations
 
-- [Project Overview](#-project-overview)
-- [Problem Statement](#-problem-statement)
-- [Objectives](#-objectives)
-- [Main Features](#-main-features)
-- [System Workflow](#-system-workflow)
-- [System Architecture](#-system-architecture)
-- [AI Models](#-ai-models)
-- [Dataset](#-dataset)
-- [Technologies Used](#️-technologies-used)
-- [Project Structure](#-project-structure)
-- [Application Modules](#-application-modules)
-- [Model Evaluation](#-model-evaluation)
-- [Model Deployment](#-model-deployment)
-- [Installation](#-installation)
-- [How to Run](#-how-to-run)
-- [Screenshots](#-screenshots)
-- [Future Improvements](#-future-improvements)
-- [Project Objectives Achievement](#-project-objectives-achievement)
-- [Academic Information](#-academic-information)
-- [Author](#-author)
-- [License](#-license)
+## 🤖 AI Model
 
----
+The project explores several Deep Learning approaches:
 
-## 📌 Project Overview
+- CNN
+- MobileNetV2
+- CNN-LSTM
 
-Communication between Deaf and hearing individuals can be challenging when both parties do not understand sign language.
+The selected model is converted to **TensorFlow Lite (TFLite)** for integration into the mobile application.
 
-**SignBuddy** aims to reduce this communication barrier by combining Artificial Intelligence, Computer Vision, Deep Learning, Natural Language Processing, and Mobile Application Development.
+The ASL recognition model supports **36 classes**:
 
-The system supports two main communication directions:
+- A–Z
+- 0–9
 
-### 1. Deaf → Hearing
+## 🛠️ Technologies
 
-The Deaf user performs an ASL hand gesture in front of the camera.
+- Python
+- TensorFlow / Keras
+- TensorFlow Lite
+- OpenCV
+- MediaPipe
+- Natural Language Processing (NLP)
+- Flutter
+- Dart
+- Speech-to-Text
+- Text-to-Speech
+
+## 📱 Application
+
+The mobile application includes:
+
+- ASL Recognition
+- Deaf-to-Hearing Communication
+- Hearing-to-Deaf Communication
+- Sign Video Output
+- Alphabet Output
+- Speech-to-Text
+- Text-to-Speech
+
+## 📂 Project Structure
 
 ```text
-ASL Hand Gesture
-       ↓
-Camera Input
-       ↓
-Image Preprocessing
-       ↓
-Deep Learning Model
-       ↓
-ASL Prediction
-       ↓
-Text Output
-       ↓
-Text-to-Speech
-       ↓
-Audio Output
+SignBuddy/
+├── ai_system/
+│   ├── training/
+│   ├── evaluation/
+│   └── realtime_testing/
+│
+├── mobile_app/
+│   ├── lib/
+│   └── assets/
+│
+├── models/
+│   ├── asl_model.tflite
+│   └── labels.txt
+│
+├── docs/
+│   └── screenshots/
+│
+└── README.md
