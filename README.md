@@ -26,7 +26,7 @@ The project explores several Deep Learning approaches:
 
 - CNN
 - MobileNetV2
-- CNN-LSTM
+- EfficientNetB0
 
 The selected model is converted to **TensorFlow Lite (TFLite)** for integration into the mobile application.
 
