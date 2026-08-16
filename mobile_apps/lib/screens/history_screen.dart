@@ -1,0 +1,2 @@
+import 'package:flutter/material.dart';
+class HistoryScreen extends StatelessWidget{const HistoryScreen({super.key});@override Widget build(BuildContext c)=>Scaffold(appBar:AppBar(title:const Text('History (Local)')),body:ListView(padding:const EdgeInsets.all(18),children:['HELLO HOW ARE YOU','MY NAME IS ZAHRA','I NEED HELP','THANK YOU','WHERE IS THE TOILET?'].map((e)=>ListTile(leading:const Icon(Icons.graphic_eq),title:Text(e),subtitle:const Text('Stored on this device only'),trailing:const Text('10:25 AM'))).toList()));}

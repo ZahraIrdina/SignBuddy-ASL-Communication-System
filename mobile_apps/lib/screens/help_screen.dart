@@ -1,0 +1,2 @@
+import 'package:flutter/material.dart';
+class HelpScreen extends StatelessWidget{const HelpScreen({super.key});@override Widget build(BuildContext c)=>Scaffold(appBar:AppBar(title:const Text('Help & Support')),body:ListView(children:['How to use the app','FAQ','Contact Us','Privacy Policy','Terms of Use','Rate the App'].map((e)=>ListTile(title:Text(e),trailing:const Icon(Icons.chevron_right))).toList()));}
